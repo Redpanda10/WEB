@@ -1,20 +1,26 @@
-//let x=document.getElementById("count").innerHTML
-
-let count= 0
-
-let countEL=document.getElementById("count-el")
+let count = 0
+let overwrite=document.getElementById("count-el")
 
 function increment(){
     count++
-    countEL.innerHTML=count
+    overwrite.innerHTML = count
 }
 function decrement(){
-    if(count==0){
+    if(count==0)
+    {
 
     }
-    else{
-    count--
-    countEL.innerHTML=count
-        }
+    else 
+    { 
+        count--
+        overwrite.innerHTML = count
+        console.log(overwrite)
+    }
+}
+let newvar=document.getElementById("inner")
+function display(){
+    newvar.textContent+=count+" - "
+    overwrite.textContent=0
+    count=0
     
 }
